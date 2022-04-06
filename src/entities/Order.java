@@ -1,11 +1,66 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 import enums.OrderStatus;
 
 public class Order {
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+	
+	public static final Calendar cal = new Calendar() {
+		
+		@Override
+		public void roll(int field, boolean up) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public int getMinimum(int field) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		public int getMaximum(int field) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		public int getLeastMaximum(int field) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		public int getGreatestMinimum(int field) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		@Override
+		protected void computeTime() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		protected void computeFields() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void add(int field, int amount) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+	
 	private Date moment;
 	private OrderStatus status;
 	private Client client;
@@ -49,8 +104,8 @@ public class Order {
 
 
 
-	public void setMoment(Date moment) {
-		this.moment = moment;
+	public void setMoment() {
+		this.moment = Calendar.getInstance().getTime();
 	}
 
 
