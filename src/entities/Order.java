@@ -130,8 +130,8 @@ public class Order {
 	}
 
 	public void orderSumary() {
-		System.out.println("Order moment: " + getMoment() + "Order status: " + getStatus() + "Client: "
-				+ client.getName() + "(" + client.getBirthDate() + ")" + " - " + client.getEmail() + "Order items:\n");
+		System.out.println("Order moment: " + sdf.format(getMoment()) + "Order status: " + getStatus() + "\nClient: "
+				+ client.getName() + "(" + client.getBirthDate() + ")" + " - " + client.getEmail() + "\nOrder items:");
 		getItems();
 		System.out.println("Total price: $" + String.format("%.2f", total()));
 	}

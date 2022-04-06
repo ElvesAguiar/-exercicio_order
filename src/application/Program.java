@@ -41,10 +41,11 @@ public class Program {
 
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
-		sc.nextLine();
+		
 		for (int i = 0; i < n; i++) {
 			// instanciando Item
-			System.out.printf("Enter #%d item data: \n", i);
+			sc.nextLine();
+			System.out.printf("Enter #%d item data: \n", i+1);
 			System.out.print("Product name: ");
 			String nameItem = sc.nextLine();
 			System.out.print("Product price: ");
@@ -61,6 +62,7 @@ public class Program {
 			order.addItem(item);
 		}
 
+		System.out.println();
 		System.out.println("ORDER SUMMARY: ");
 		order.orderSumary();
 		sc.close();
